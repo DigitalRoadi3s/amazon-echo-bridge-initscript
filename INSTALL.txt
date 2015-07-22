@@ -1,0 +1,10 @@
+Installation Instructions
+
+You will need the IP address of your RaspberryPi.  If you are using windows download and install putty and connect to the raspberrypi.
+
+ssh pi@IP_ADDRESS_RASPBERRYPI
+cd /tmp/
+git clone https://github.com/Ericsante/amazon-echo-bridge-initscript.git
+sudo mv amazon-echo-bridge-initscript/amazon-echo-bridge /etc/init.d/
+sudo chmod +x /etc/init.d/amazon-echo-bridge
+sudo update-rc.d amazon-echo-bridge enable 345
