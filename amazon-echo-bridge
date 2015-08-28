@@ -12,11 +12,11 @@
 # Special-Thanks:	 armzilla
 ### END INIT INFO
 
-VER="0.2.0"
+VER="0.2.1"
 IP=`ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'`
 
 # What is this?
 DESC="Amazon Echo Bridge"
 
 cd /opt/echo
-nohup java -jar amazon-echo-bridge-$VER.jar –upnp.config.address=$IP > /dev/null 2>&1 &
+nohup java -jar amazon-echo-bridge-$VER.jar –-upnp.config.address=$IP > /dev/null 2>&1 &
